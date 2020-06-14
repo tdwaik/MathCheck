@@ -7,7 +7,7 @@ public class MathCheck {
     public static void main(String[] args) {
 
         String bla = "2*6*8(398/7)-5+(7%5)(5+2*(1+2))+2*(2)+2*2^2((2*2))";
-        String regex = "\\((\\d+[\\+\\-\\*\\/\\^\\%])+\\d+\\)|\\(\\d+\\)|(\\d+[\\+\\-\\*\\/\\^\\%])+\\d+";
+        String regex = "\(([(|\-)\d(|(\.\d))a-z]+[\+\-\*\/\^\%])+[(|\-)\d(|(\.\d))a-z]+\)|\([(|\-)\d(|(\.\d))a-z]+\)|([(|\-)\d(|(\.\d))a-z]+[\+\-\*\/\^\%])+[(|\-)\d(|(\.\d))a-z]+";
         String replaceWith = "1"; // use only numbers
         String compare;
 
